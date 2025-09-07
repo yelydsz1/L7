@@ -44,7 +44,7 @@ jobs:
               repo: context.repo.repo,
               pull_number: ${{ github.event.issue.number }},
             });
-            return pullRequest.head.ref;
+            return pullRequest.head.sha;
 
       # Checkout the comment's branch
       - uses: actions/checkout@v4
